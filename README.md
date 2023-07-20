@@ -6,7 +6,8 @@
 - mongodb
 
 ## Installation
-- `npm install`
+- step 1: `git clone https://github.com/vanh6803/backendAndroidNetworking`
+- step 2: `npm install`
 
 ## Usage
 - run app `npm start`
