@@ -74,3 +74,19 @@ exports.delete = async (req, res, next) => {
     });
   }
 };
+
+exports.detail =  async (req, res, next) => {
+  var id = req.params.id
+  try {
+    var image = await model.imageNasa.findById({ _id: id});
+    if (image) {
+      return res
+        .status(200)
+        .json({ status: 200, data: image, message: "get data successfully" });
+    } else {
+      return res.status(401).json({ status: 401, message: "not found" });
+    }
+  } catch (error) {
+    return res.status(500).json({ status: 500, message: error.message });
+  }
+}

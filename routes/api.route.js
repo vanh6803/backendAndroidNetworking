@@ -3,6 +3,7 @@ var router = express.Router();
 const controller = require('../controllers/imageNasa.controller');
 
 router.get('/',controller.list);
+router.get('/detail/:id',controller.detail);
 router.post('/add',controller.add);
 router.put('/update/:id',controller.update);
 router.delete('/delete/:id',controller.delete);
